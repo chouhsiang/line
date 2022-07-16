@@ -2482,7 +2482,7 @@
     M.call(this);
     this.eb = "google-analytics";
     this.J = chrome.storage.local;
-    chrome.storage.onChanged.addListener(t(this.Ac, this));
+    //chrome.storage.onChanged.addListener(t(this.Ac, this));
   };
   w(ld, M);
   ld.prototype.Ac = function (a) {
