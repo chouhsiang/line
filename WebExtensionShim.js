@@ -18,7 +18,7 @@ if (modernizr.existsLocalStorage()) {
 }
 
 var chrome, browser;
-chrome = browser = {
+chrome_new = browser = {
   i18n: {
     getAcceptLanguages: function (callback) {
       var languages = ["en-US", "en-GB", "en"];

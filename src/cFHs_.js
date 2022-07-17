@@ -1760,8 +1760,8 @@
     var ld = function () {
         M.call(this);
         this.eb = "google-analytics";
-        this.J = chrome.storage.local;
-        chrome.storage.onChanged.addListener(t(this.Ac, this))
+        this.J = chrome_new.storage.local;
+        chrome_new.storage.onChanged.addListener(t(this.Ac, this))
     };
     w(ld, M);
     ld.prototype.Ac = function (a) {
@@ -1775,7 +1775,7 @@
     ld.prototype.get = function (a) {
         var b = new Q, c = this.eb + "." + a;
         this.J.get(c, function (a) {
-            chrome.runtime.lastError ? b.A(chrome.runtime.lastError) : (a = a[c], b.v(null != a ? a.toString() : void 0))
+            chrome_new.runtime.lastError ? b.A(chrome_new.runtime.lastError) : (a = a[c], b.v(null != a ? a.toString() : void 0))
         });
         return b
     };
@@ -1783,7 +1783,7 @@
         var c = new Q, d = {};
         d[this.eb + "." + a] = b;
         this.J.set(d, function () {
-            chrome.runtime.lastError ? c.A(chrome.runtime.lastError) : c.v()
+            chrome_new.runtime.lastError ? c.A(chrome_new.runtime.lastError) : c.v()
         });
         return c
     };
@@ -2345,7 +2345,7 @@
     v("goog.events.EventTarget", M);
     v("goog.events.EventTarget.prototype.listen", M.prototype.listen);
     v("analytics.getService", function (a, b) {
-        var c = he.get(a, null), d = b || chrome.runtime.getManifest().version;
+        var c = he.get(a, null), d = b || chrome_new.runtime.getManifest().version;
         if (null === c) {
             c = ie();
             if (!Ea) {
